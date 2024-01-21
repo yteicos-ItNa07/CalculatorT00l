@@ -1,31 +1,44 @@
-# Basic Calculator in Python
+# Advanced Calculator in Python
 
-This Python script is a straightforward calculator with essential arithmetic functions. It operates in a console environment, providing a simple user interface for basic calculations.
+This Python script extends the functionality of a basic calculator by incorporating additional mathematical operations and memory features. It operates in a console environment, offering a versatile set of calculations.
 
 ## Features
 
-- **Addition:** Adds two numbers.
-- **Subtraction:** Deducts the second number from the first.
-- **Multiplication:** Multiplies two numbers.
-- **Division:** Divides the first number by the second, handling division by zero.
+- **Arithmetic Operations:**
+  - Addition
+  - Subtraction
+  - Multiplication
+  - Division
+  - Modulus (remainder of division)
+  - Exponentiation
+  - Square Root
+  - Factorial
+  - Trigonometric Functions (Sine, Cosine, Tangent)
+
+- **Memory Operations:**
+  - Store Result in Memory
+  - Recall Memory
 
 ## Usage
 
 1. Run the script in a terminal or command prompt:
 
    ```bash
-   python basic_calculator.py
+   python advanced_calculator.py
    ```
 
-2. Follow prompts to select an operation and input numbers.
+2. Select an operation from the menu and follow on-screen prompts for input.
 
-3. To exit, choose option 5.
+3. For operations involving two numbers, enter both when prompted.
+
+4. To exit the calculator, select option 14.
 
 ## Notes
 
-- The script includes basic error handling for division by zero.
-- Easily expand functionality by adding more operations or features.
-
-Feel free to modify this script to suit your needs. Contributions are welcome through issues or pull requests.
+- Trigonometric functions assume input in degrees.
+- The calculator includes a memory feature to store and recall results.
+- Customize the script by adding or modifying functions as needed.
+  
+Feel free to explore the advanced features and contribute improvements or additional functions through issues or pull requests.
 
 **Happy calculating!**
