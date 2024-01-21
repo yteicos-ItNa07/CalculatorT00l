@@ -1,0 +1,62 @@
+class BasicCalculator:
+    def add(self, a, b):
+        return a + b
+
+    def subtract(self, a, b):
+        return a - b
+
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Cannot divide by zero"
+
+    def modulus(self, a, b):
+        return a % b
+
+    def exponentiate(self, a, b):
+        return a ** b
+
+
+if __name__ == "__main__":
+    calculator = BasicCalculator()
+
+    while True:
+        print("Select operation:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Modulus")
+        print("6. Exponentiation")
+        print("7. Exit")
+
+        choice = int(input())
+
+        if choice == 7:
+            print("Calculator has exited.")
+            break
+
+        if 1 <= choice <= 6:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+            if choice == 1:
+                result = calculator.add(num1, num2)
+            elif choice == 2:
+                result = calculator.subtract(num1, num2)
+            elif choice == 3:
+                result = calculator.multiply(num1, num2)
+            elif choice == 4:
+                result = calculator.divide(num1, num2)
+            elif choice == 5:
+                result = calculator.modulus(num1, num2)
+            elif choice == 6:
+                result = calculator.exponentiate(num1, num2)
+
+            print("Result:", result)
+        else:
+            print("Invalid choice. Please choose a number between 1 and 7.")
