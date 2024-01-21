@@ -1,0 +1,121 @@
+class AdvancedCalculator:
+    def __init__(self):
+        self.memory = 0
+
+    def add(self, a, b):
+        return a + b
+
+    def subtract(self, a, b):
+        return a - b
+
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        if b != 0:
+            return a / b
+        else:
+            return "Cannot divide by zero"
+
+    def modulus(self, a, b):
+        return a % b
+
+    def exponentiate(self, a, b):
+        return a ** b
+
+    def square_root(self, a):
+        return a ** 0.5
+
+    def factorial(self, n):
+        if n == 0 or n == 1:
+            return 1
+        else:
+            return n * self.factorial(n - 1)
+
+    def sin(self, angle):
+        # Assuming angle is in degrees
+        return math.sin(math.radians(angle))
+
+    def cos(self, angle):
+        # Assuming angle is in degrees
+        return math.cos(math.radians(angle))
+
+    def tan(self, angle):
+        # Assuming angle is in degrees
+        return math.tan(math.radians(angle))
+
+    def store_result(self, result):
+        self.memory = result
+
+    def recall_memory(self):
+        return self.memory
+
+
+if __name__ == "__main__":
+    import math
+
+    calculator = AdvancedCalculator()
+
+    while True:
+        print("Select operation:")
+        print("1. Addition")
+        print("2. Subtraction")
+        print("3. Multiplication")
+        print("4. Division")
+        print("5. Modulus")
+        print("6. Exponentiation")
+        print("7. Square Root")
+        print("8. Factorial")
+        print("9. Sine (in degrees)")
+        print("10. Cosine (in degrees)")
+        print("11. Tangent (in degrees)")
+        print("12. Store Result in Memory")
+        print("13. Recall Memory")
+        print("14. Exit")
+
+        choice = int(input())
+
+        if choice == 14:
+            print("Calculator has exited.")
+            break
+
+        if 1 <= choice <= 13:
+            if choice in [7, 8, 9, 10, 11]:
+                num1 = float(input("Enter number: "))
+            else:
+                num1 = float(input("Enter first number: "))
+                num2 = float(input("Enter second number: "))
+
+            if choice == 1:
+                result = calculator.add(num1, num2)
+            elif choice == 2:
+                result = calculator.subtract(num1, num2)
+            elif choice == 3:
+                result = calculator.multiply(num1, num2)
+            elif choice == 4:
+                result = calculator.divide(num1, num2)
+            elif choice == 5:
+                result = calculator.modulus(num1, num2)
+            elif choice == 6:
+                result = calculator.exponentiate(num1, num2)
+            elif choice == 7:
+                result = calculator.square_root(num1)
+            elif choice == 8:
+                result = calculator.factorial(int(num1))
+            elif choice == 9:
+                result = calculator.sin(num1)
+            elif choice == 10:
+                result = calculator.cos(num1)
+            elif choice == 11:
+                result = calculator.tan(num1)
+            elif choice == 12:
+                calculator.store_result(result)
+                print("Result stored in memory.")
+                continue
+            elif choice == 13:
+                print("Recalled from memory:", calculator.recall_memory())
+                continue
+
+            print("Result:", result)
+        else:
+            print("Invalid choice. Please choose a number between 1 and 14.")
